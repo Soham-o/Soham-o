@@ -1,5 +1,5 @@
 # 💫 About Me:
-🌱 I’m currently learning<br>💬 Ask me about Python & C language<br>⚡ Fun fact Coding is often described as a ‘left brain’ activity because it relies on logic and problem-solving skills.  <br>To write code, you need to be able to think logically and solve problems.
+🌱 I’m currently learning<br>💬 Ask me about Python & Data Analystics <br>⚡ Fun fact Coding is often described as a ‘left brain’ activity because it relies on logic and problem-solving skills.  <br>To write code, you need to be able to think logically and solve problems.
 
 
 ## 🌐 Socials:
