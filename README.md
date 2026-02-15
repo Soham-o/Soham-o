@@ -43,7 +43,7 @@
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,html,css,js,opencv,powershell,gcp,stackoverflow,github,pandas,numpy,tensorflow,scikitlearn,git,docker,vscode,linux&perline=6" />
+    <img src="https://skillicons.dev/icons?i=py,html,css,js,opencv,powershell,gcp,stackoverflow,github,tensorflow,scikitlearn,git,docker,vscode,linux&perline=6" />
   </a>
 </p>
 
@@ -66,7 +66,7 @@
 
 <h3 align="center">🏆 GitHub Trophies</h3>
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=radical&no-frame=true&margin-w=15&margin-h=15&column=7" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Soham-o&theme=radical&no-frame=true&margin-w=15&margin-h=15&column=7" />
 </div>
 
 <br />
