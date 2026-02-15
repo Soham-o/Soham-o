@@ -74,7 +74,7 @@
 <table align="center" width="100%" border="0">
   <tr>
     <td width="60%">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&bg_color=1a1b27&color=7aa2f7&line=7aa2f7&point=c0caf5&area=true&hide_border=true" width="100%" />
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=Soham-o&bg_color=1a1b27&color=7aa2f7&line=7aa2f7&point=c0caf5&area=true&hide_border=true" width="100%" />
     </td>
     <td width="40%">
       <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="100%" />
@@ -85,5 +85,5 @@
 <br />
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=flat-square&color=blue" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Soham-o&style=flat-square&color=blue" alt="Profile Views" />
 </div>
