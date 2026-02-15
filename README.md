@@ -7,14 +7,17 @@
   </a>
 
   <p>
-    <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">
+    <a href="https://github.com/Soham-o" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    </a>
+    <a href="[https://linkedin.com/in/YOUR_LINKEDIN_URL](https://www.linkedin.com/in/soham-panda-a90720336/)" target="_blank">
       <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
-    <a href="mailto:YOUR_EMAIL@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+    <a href="https://stackoverflow.com/users/YOUR_ID" target="_blank">
+      <img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" alt="Stack Overflow" />
     </a>
-    <a href="https://twitter.com/YOUR_TWITTER" target="_blank">
-      <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+    <a href="mailto:sohampanda95599@gmail.com@gmail.com">
+      <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
     </a>
   </p>
 
@@ -34,13 +37,13 @@
 >
 > 💬 **Ask me about:** > * Python 🐍
 > * Data Analytics 📊
-> * Automation 🤖
+> * Computer Vision 👁️
 
 <h3>💻 Tech Stack</h3>
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,pandas,numpy,tensorflow,scikitlearn,mysql,git,docker,vscode,aws,linux&perline=6" />
+    <img src="https://skillicons.dev/icons?i=py,html,css,js,opencv,powershell,gcp,stackoverflow,github,pandas,numpy,tensorflow,scikitlearn,git,docker,vscode,linux&perline=6" />
   </a>
 </p>
 
@@ -49,11 +52,11 @@
 
 <h3>📊 Weekly Stats</h3>
 
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" width="100%" />
+<img src="https://github-readme-stats.vercel.app/api?username=Soham-o&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" width="100%" />
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight&hide_border=true" alt="Streak Stats" width="100%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Soham-o&theme=tokyonight&hide_border=true" alt="Streak Stats" width="100%" />
 
 </td>
 </tr>
