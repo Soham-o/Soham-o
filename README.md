@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0f3460,100:16213e&height=280&section=header&text=Soham%20Panda&fontSize=72&fontColor=58a6ff&fontAlignY=38&desc=AI%20%26%20Automation%20Engineer%20%7C%20CS%20Student%20%7C%20Systems%20Builder&descAlignY=58&descSize=20&descColor=8b949e&animation=fadeIn)
+![Header](header.svg)
 
 </div>
 
@@ -314,6 +314,6 @@ If you have a repetitive problem, a process that wastes time, or an idea that ne
 
 <div align="center">
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:0f3460,100:0d1117&height=120&section=footer&fontColor=58a6ff)
+![Footer](footer.svg)
 
 </div>
