@@ -1,0 +1,21 @@
+<svg width="900" height="120" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="50%" style="stop-color:#0f3460"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#1f6feb;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="120" fill="url(#bg)"/>
+
+  <!-- Waves at top of footer -->
+  <path d="M0,40 C150,20 300,60 450,30 C600,0 750,50 900,20 L900,0 L0,0 Z" fill="url(#wave1)" opacity="0.5"/>
+  <path d="M0,60 C200,35 400,70 600,45 C750,25 850,55 900,35 L900,0 L0,0 Z" fill="#0d1117" opacity="0.3"/>
+
+  <text x="450" y="85" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e" text-anchor="middle" opacity="0.7">Built with ♥ by Soham Panda · Open to collaborations</text>
+</svg>

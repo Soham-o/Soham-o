@@ -1,0 +1,42 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#0f3460"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0.2"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#1f6feb;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="280" fill="url(#bg)"/>
+
+  <!-- Wave layers -->
+  <path d="M0,200 C150,160 300,240 450,190 C600,140 750,220 900,180 L900,280 L0,280 Z" fill="url(#wave1)" opacity="0.6"/>
+  <path d="M0,230 C120,200 280,260 450,220 C620,180 780,250 900,210 L900,280 L0,280 Z" fill="url(#wave2)" opacity="0.8"/>
+  <path d="M0,250 C200,230 400,270 600,245 C750,225 850,255 900,240 L900,280 L0,280 Z" fill="#0d1117" opacity="0.5"/>
+
+  <!-- Decorative dots -->
+  <circle cx="80" cy="60" r="2" fill="#58a6ff" opacity="0.4"/>
+  <circle cx="150" cy="30" r="1.5" fill="#58a6ff" opacity="0.3"/>
+  <circle cx="820" cy="50" r="2" fill="#58a6ff" opacity="0.4"/>
+  <circle cx="760" cy="80" r="1.5" fill="#58a6ff" opacity="0.25"/>
+  <circle cx="50" cy="130" r="1" fill="#58a6ff" opacity="0.3"/>
+  <circle cx="870" cy="130" r="1.5" fill="#58a6ff" opacity="0.3"/>
+
+  <!-- Name -->
+  <text x="450" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="62" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="2">Soham Panda</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="165" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="400" fill="#8b949e" text-anchor="middle" letter-spacing="1">AI &amp; Automation Engineer · CS Student · Systems Builder</text>
+
+  <!-- Thin accent line -->
+  <line x1="320" y1="182" x2="580" y2="182" stroke="#1f6feb" stroke-width="1" opacity="0.6"/>
+</svg>
