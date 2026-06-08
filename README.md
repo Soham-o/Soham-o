@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
 <!-- 
-  ⚠️  IMAGE FIX NOTE:
+    IMAGE FIX NOTE:
   header.svg and footer.svg must be committed to the ROOT of this repo.
   GitHub renders SVGs from raw.githubusercontent.com — make sure both files
   exist at: github.com/Soham-o/Soham-o/blob/main/header.svg
