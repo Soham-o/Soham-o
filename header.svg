@@ -1,0 +1,65 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1f6feb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f6feb" stroke-width="0.3" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="url(#bg)" rx="12"/>
+  <!-- Grid overlay -->
+  <rect width="900" height="200" fill="url(#grid)" rx="12"/>
+
+  <!-- Animated glow circles -->
+  <circle cx="80" cy="100" r="60" fill="#1f6feb" opacity="0.06"/>
+  <circle cx="820" cy="100" r="60" fill="#58a6ff" opacity="0.06"/>
+  <circle cx="450" cy="20" r="80" fill="#1f6feb" opacity="0.04"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="900" height="3" fill="url(#accent)" rx="12" opacity="0.9"/>
+
+  <!-- Left bracket decoration -->
+  <text x="60" y="105" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#1f6feb" opacity="0.25" font-weight="700">{</text>
+  <!-- Right bracket decoration -->
+  <text x="808" y="105" font-family="JetBrains Mono, Courier New, monospace" font-size="52" fill="#1f6feb" opacity="0.25" font-weight="700">}</text>
+
+  <!-- Small dots decoration -->
+  <circle cx="130" cy="40" r="2" fill="#58a6ff" opacity="0.5"/>
+  <circle cx="150" cy="40" r="2" fill="#58a6ff" opacity="0.3"/>
+  <circle cx="170" cy="40" r="2" fill="#58a6ff" opacity="0.15"/>
+  <circle cx="770" cy="160" r="2" fill="#58a6ff" opacity="0.5"/>
+  <circle cx="750" cy="160" r="2" fill="#58a6ff" opacity="0.3"/>
+  <circle cx="730" cy="160" r="2" fill="#58a6ff" opacity="0.15"/>
+
+  <!-- Main name -->
+  <text x="450" y="90" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="38" font-weight="700" fill="#e6edf3" filter="url(#glow)">SOHAM PANDA</text>
+
+  <!-- Accent underline -->
+  <rect x="305" y="98" width="290" height="2" fill="url(#accent)" rx="1" opacity="0.8"/>
+
+  <!-- Role text -->
+  <text x="450" y="130" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="14" font-weight="400" fill="#58a6ff" letter-spacing="4">AI &amp; AUTOMATION ENGINEER</text>
+
+  <!-- Tagline -->
+  <text x="450" y="162" text-anchor="middle" font-family="JetBrains Mono, Courier New, monospace" font-size="11" fill="#8b949e" letter-spacing="1">Open to Freelance · Collaboration · Full-Time AI Engineering Roles</text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="197" width="900" height="3" fill="url(#accent)" rx="12" opacity="0.6"/>
+</svg>
