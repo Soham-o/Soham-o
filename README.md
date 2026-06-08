@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════ -->
 
 <!-- 
-    IMAGE FIX NOTE:
+  ⚠️  IMAGE FIX NOTE:
   header.svg and footer.svg must be committed to the ROOT of this repo.
   GitHub renders SVGs from raw.githubusercontent.com — make sure both files
   exist at: github.com/Soham-o/Soham-o/blob/main/header.svg
@@ -63,7 +63,7 @@ class SohamPanda:
         self.email       = "sohampanda95599@gmail.com"
 
         # ── Updated with exact academic context ──────────────────────────
-        self.status      = "Building in public"
+        self.status      = "B.Tech AI & ML @ SGT University → Building in public"
 
         self.strengths   = [
             "Workflow automation",
@@ -346,14 +346,27 @@ Shipped multiple end-to-end systems: voice AI receptionist (PVCA), news digest p
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Soham-o&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soham-o&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e" />
+<!--
+  FIX NOTE: The public vercel.app deployment rate-limits heavily.
+  cache_seconds=1800 reduces 429 errors. If cards still break,
+  self-host github-readme-stats on your own Vercel account (free)
+  and swap the domain below to your deployment URL.
+-->
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Soham-o&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e&cache_seconds=1800" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Soham-o&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&cache_seconds=1800" />
 
 </div>
 
 <div align="center">
 
 <img src="https://streak-stats.demolab.com?user=Soham-o&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff7b00&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" width="50%" />
+
+</div>
+
+<div align="center">
+
+<!-- GitHub Trophies — separate stable service, adds visual depth -->
+<img src="https://github-profile-trophy.vercel.app/?username=Soham-o&theme=algolia&no-frame=true&no-bg=true&margin-w=6&column=6" width="100%" />
 
 </div>
 
