@@ -253,17 +253,29 @@ Explored and implemented a full autonomous driving pipeline covering the core AV
 
 <div align="center">
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Soham-o&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff7b00&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" width="50%" />
+<!-- streak-stats.demolab.com is more stable than the herokuapp version -->
+<img src="https://streak-stats.demolab.com?user=Soham-o&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff7b00&currStreakLabel=58a6ff&sideLabels=8b949e&dates=8b949e" width="50%" />
 
 </div>
 
 ---
 
-## 🏆 GitHub Trophies
+## 🏆 Milestones & Achievements
 
 <div align="center">
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=Soham-o&theme=darkhub&no-frame=true&margin-w=12&margin-h=12&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+| 🗂️ Repositories | ⭐ Total Stars | 👥 Followers | 🔥 Contributions | 📅 Member Since |
+|:---:|:---:|:---:|:---:|:---:|
+| Check profile | Check profile | 41+ | 148+ | May 2024 |
+
+</div>
+
+<div align="center">
+
+![Commits](https://img.shields.io/badge/Total%20Commits-148%2B-58a6ff?style=for-the-badge&labelColor=0d1117)
+![Streak](https://img.shields.io/badge/Current%20Streak-4%20days-ff7b00?style=for-the-badge&labelColor=0d1117)
+![Longest](https://img.shields.io/badge/Longest%20Streak-6%20days-58a6ff?style=for-the-badge&labelColor=0d1117)
+![Since](https://img.shields.io/badge/Active%20Since-May%202024-8b949e?style=for-the-badge&labelColor=0d1117)
 
 </div>
 
