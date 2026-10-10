@@ -52,24 +52,24 @@ All three projects have test suites running in CI, about 300 tests in Cursor Bit
 
 <a href="https://github.com/Soham-o/cursor_bite"><img src="assets/cursor-bite.png" alt="Cursor Bite's radial menu with Translate highlighted, next to its keyboard shortcuts: Ctrl+Alt+B to open, then keys 1 to 8 for Translate, Summarize, Explain, Search Web, Settings, Capture OCR, Rewrite and Ask AI" width="100%"/></a>
 
-**Problem:** using AI on a sentence in a PDF or an IDE means copying it into another app.
-**Approach:** a native `RegisterHotKey` listener (no keyboard hooks) and a PyQt6 radial menu that opens instantly. Clipboard capture runs in parallel on a worker thread. The pipeline is split into `prepare()` and `execute()`, so a consent dialog can sit between them.
+**Problem:** using AI on a sentence in a PDF or an IDE means copying it into another app.<br/>
+**Approach:** a native `RegisterHotKey` listener (no keyboard hooks) and a PyQt6 radial menu that opens instantly. Clipboard capture runs in parallel on a worker thread. The pipeline is split into `prepare()` and `execute()`, so a consent dialog can sit between them.<br/>
 **What it shows:** desktop systems work, privacy-aware design and graceful degradation, backed by about 300 tests and Windows CI. *Working on Windows.*
 
 ### 🌫️ [AirTwin X](https://github.com/Soham-o/AirTwin-X): from "how bad is the air?" to "what should the city do?"
 
 <a href="https://github.com/Soham-o/AirTwin-X"><img src="assets/airtwin-x.png" alt="AirTwin X pipeline: live data from WAQI, Open-Meteo, NASA FIRMS and OpenStreetMap feeds source attribution, then intervention ranking, scenario simulation, health and economic impact, and a rule-based Mayor Copilot" width="100%"/></a>
 
-**Problem:** AQI dashboards report a number but don't help anyone decide what to do.
-**Approach:** attribute pollution to its sources, rank eight interventions with a weighted score, and simulate combinations. Overlapping effects **compound** rather than add, and the total is capped at 85%. Health and cost estimates are derived from the result.
+**Problem:** AQI dashboards report a number but don't help anyone decide what to do.<br/>
+**Approach:** attribute pollution to its sources, rank eight interventions with a weighted score, and simulate combinations. Overlapping effects **compound** rather than add, and the total is capped at 85%. Health and cost estimates are derived from the result.<br/>
 **What it shows:** integrating several live APIs, modelling with stated assumptions, and AI-style answers that stay auditable. *Prototype; 29 tests in GitHub Actions.*
 
 ### 🌍 [EarthShare](https://github.com/Soham-o/EarthShare): owning a carbon footprint, not just watching it
 
 <a href="https://github.com/Soham-o/EarthShare"><img src="assets/earthshare.png" alt="EarthShare dashboard showing a daily check-in, a carbon score ring at 565, 520 kg of CO2 this month, reduction potential and yearly projections" width="100%"/></a>
 
-**Problem:** most carbon apps stop at charts and streaks.
-**Approach:** a deterministic emissions engine behind a layered FastAPI backend (thin routes, services, repositories) with JWT auth, rate limiting and security headers, and a Next.js frontend.
+**Problem:** most carbon apps stop at charts and streaks.<br/>
+**Approach:** a deterministic emissions engine behind a layered FastAPI backend (thin routes, services, repositories) with JWT auth, rate limiting and security headers, and a Next.js frontend.<br/>
 **What it shows:** building a complete full-stack system with security and accessibility in mind. *Prototype built for a hackathon; CI runs the backend tests (85 passed, 1 skipped), the frontend tests (21 passed) and a production build.*
 
 ### 🔧 Fixes merged into open-source AI-agent tools
