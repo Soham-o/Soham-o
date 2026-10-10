@@ -44,7 +44,7 @@ estimates health and economic effects.
 
 - **Tech:** Python, Streamlit, Folium, Plotly, OSMnx/NetworkX, XGBoost,
   Stable-Baselines3; WAQI, Open-Meteo and OpenStreetMap data.
-- **Evidence:** 27 pytest tests for determinism, ranking and simulation bounds.
+- **Evidence:** 29 pytest tests for determinism, ranking, simulation bounds and NASA FIRMS key handling; GitHub Actions runs this suite.
 - **Limits:** model weights are fixed assumptions, the forecast model is
   trained on synthetic data, and live sensor data needs a WAQI token
   (otherwise it uses simulated data).
