@@ -1,109 +1,109 @@
 <div align="center">
 
-<img src="header.svg" alt="Soham Panda: computer science student working on AI systems and developer tooling" width="100%"/>
+<img src="header.svg" alt="Soham Panda: AI systems, automation and developer tools" width="100%"/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Soham_Panda-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soham-panda-a90720336/)
-[![Email](https://img.shields.io/badge/Email-sohampanda95599%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sohampanda95599@gmail.com)
+### Building AI tools that fit into the way people already work, and keep working when something goes wrong.
+
+[How I build](#how-i-build) · [Toolbox](#toolbox) · [Evidence](#the-evidence) · [Where I'm heading](#where-im-heading)
 
 </div>
 
-## About me
+<br/>
 
-I'm a computer science student at **SGT University** in India. I build tools in
-**Python** that put AI to practical use: desktop assistants, decision-support
-dashboards and small automations. Lately I've also been making focused fixes in
-other people's open-source projects.
+I'm **Soham**. I build software that puts AI models inside real workflows rather than beside them. My work includes an assistant that appears at your cursor instead of in another browser tab, and a decision pipeline that shows its arithmetic instead of guessing. I've also fixed bugs inside open-source tools that developers use to build and run AI agents.
 
-What I care about in my own projects: running locally when possible, degrading
-gracefully when a dependency is missing, and having tests that pin down the
-behaviour I claim.
+The model call is rarely the hard part. I'm most interested in everything around it: the integrations, the failure cases, the privacy boundaries, and the tests that turn an AI feature into something you can depend on.
 
-## Featured projects
+## How I build
 
-### [Cursor Bite](https://github.com/Soham-o/cursor_bite) · working (Windows)
+A few habits show up across everything I've made. Each links to where you can see it in code.
 
-A local-first Windows assistant that opens a radial menu at your mouse cursor
-when you press a hotkey, so you can translate, explain, summarize, rewrite, OCR
-or search the text you've selected without switching apps.
+**🎯 Put the AI where the work already is.**
+Every copy, tab switch and paste is friction. [Cursor Bite](https://github.com/Soham-o/cursor_bite) opens a menu at the mouse cursor through a global Windows hotkey. You act on selected text without leaving the window you're in.
 
-- **Built:** native `RegisterHotKey` listener, a PyQt6 radial menu and result
-  panel, clipboard-safe selection capture, and a privacy gateway that blocks or
-  asks consent before sensitive text leaves the machine (web search only).
-  Every optional engine loads lazily and fails safe.
-- **Tech:** Python, PyQt6, pywin32, Ollama, Argos Translate, Tesseract.
-- **Evidence:** about 300 pytest tests (unit, integration and security) and
-  GitHub Actions CI on Windows.
-- **Limits:** Windows only. Read Aloud is planned, not built.
+**🔒 Keep data local unless there's a reason to send it.**
+Cursor Bite translates, explains and OCRs with local engines (Ollama, Argos, Tesseract). Only web search goes online. A privacy gateway scans text before it does, and asks before anything sensitive leaves.
 
-### [AirTwin X](https://github.com/Soham-o/AirTwin-X) · prototype
+**🧮 Use models for language, and deterministic code for numbers.**
+In [AirTwin X](https://github.com/Soham-o/AirTwin-X), the "copilot" answers only from values the pipeline has already computed, so every figure can be traced. [EarthShare](https://github.com/Soham-o/EarthShare) computes carbon estimates and insights with deterministic rules. Gemini can rephrase the insights, but it never does the accounting.
 
-A Streamlit dashboard that breaks a city's AQI down by likely source, ranks
-eight municipal interventions with a weighted multi-criteria score, simulates
-combined interventions with overlap-compounding instead of naive addition, and
-estimates health and economic effects.
+**🔌 Connect the whole system, then plan for the missing piece.**
+AirTwin X joins four live data sources (air-quality sensors, weather, satellite fire data and road networks) into one pipeline. It keeps running when sources fail, because real APIs time out and keys go missing. Missing sensor data falls back to a simulation, and missing fire data to a weather-based estimate. Cursor Bite loads every engine lazily, so a bare install still starts.
 
-- **Tech:** Python, Streamlit, Folium, Plotly, OSMnx/NetworkX, XGBoost,
-  Stable-Baselines3; WAQI, Open-Meteo and OpenStreetMap data.
-- **Evidence:** 29 pytest tests for determinism, ranking, simulation bounds and NASA FIRMS key handling; GitHub Actions runs this suite.
-- **Limits:** model weights are fixed assumptions, the forecast model is
-  trained on synthetic data, and live sensor data needs a WAQI token
-  (otherwise it uses simulated data).
+**🧪 Keep going after the demo works.**
+All three projects have test suites running in CI, about 300 tests in Cursor Bite alone. The same habit of reading code closely got two of my fixes merged into AI-agent tooling maintained by other people.
 
-### [EarthShare](https://github.com/Soham-o/EarthShare) · prototype
+## Toolbox
 
-A carbon-footprint tracker with a deterministic emissions engine, a FastAPI
-backend and a Next.js frontend.
+**Used in working projects**
 
-- **Tech:** Python, FastAPI, pytest; TypeScript, Next.js/React, Vitest.
-- **Evidence:** GitHub Actions validates the backend (85 passed, 1 skipped),
-  frontend (21 passed), and a successful frontend build; coverage includes
-  security-header and accessibility tests.
+**AI & LLMs** · local models via Ollama · Gemini API · deterministic decision pipelines · XGBoost · scikit-learn<br/>
+**Automation & integrations** · REST APIs (WAQI, Open-Meteo, NASA FIRMS, OpenStreetMap, DuckDuckGo) · Windows global hotkeys and clipboard (pywin32) · OCR with Tesseract · GitHub Actions<br/>
+**Applications** · Python · PyQt6 desktop UI · Streamlit · FastAPI · Next.js / React · TypeScript<br/>
+**Engineering** · pytest · Vitest · ruff · Git · Linux
 
-## Open-source contributions
+**Used lightly so far:** Rust (one merged fix) · PyTorch / Stable-Baselines3 (a PPO training script) · Docker (a container for a Streamlit app)
 
-Merged pull requests to projects maintained by other people:
+**Exploring next:** multi-agent frameworks such as CrewAI · voice agents · deploying Python services to Google Cloud
 
-| Project | Pull request | What it changed |
-|---|---|---|
-| [hermes-labs-ai/lintlang](https://github.com/hermes-labs-ai/lintlang) | [#88](https://github.com/hermes-labs-ai/lintlang/pull/88) · merged | The YAML config parser now rejects non-string tool names with a clear `tools[i].name must be a string` error instead of failing with an internal `AttributeError`, with a regression test (fixes #87). |
-| [1jehuang/jcode](https://github.com/1jehuang/jcode) | [#1645](https://github.com/1jehuang/jcode/pull/1645) · merged | The Anthropic provider (Rust) now drops orphaned native web-search blocks left by interrupted turns before replaying history, which otherwise caused the API to reject the whole request; includes tests. |
+## The evidence
 
-All of my public pull requests:
-[github.com/pulls?q=author:Soham-o](https://github.com/pulls?q=is%3Apr+author%3ASoham-o+is%3Apublic)
+### ⌨️ [Cursor Bite](https://github.com/Soham-o/cursor_bite): AI at the cursor, on your own machine
 
-## Other work
+<a href="https://github.com/Soham-o/cursor_bite"><img src="assets/cursor-bite.png" alt="Cursor Bite's radial menu with Translate highlighted, next to its keyboard shortcuts: Ctrl+Alt+B to open, then keys 1 to 8 for Translate, Summarize, Explain, Search Web, Settings, Capture OCR, Rewrite and Ask AI" width="100%"/></a>
 
-- **[PersonaLearn](https://github.com/Soham-o/PersonaLearn)**: team project
-  (Team Innovsphere, 5 members) built in a 3-hour sprint. A Streamlit app that
-  uses Gemini to explain study topics through analogies from a learner's
-  interests and quizzes them on the result.
-- **Machine-learning notebooks**:
-  [movie recommender](https://github.com/Soham-o/Movie_Recommender_System),
-  [Spotify genre clustering](https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation),
-  [fake-news detection](https://github.com/Soham-o/Fake-News-Detection-),
-  using scikit-learn (cosine similarity, k-means, logistic regression) and pandas.
+**Problem:** using AI on a sentence in a PDF or an IDE means copying it into another app.<br/>
+**Approach:** a native `RegisterHotKey` listener (no keyboard hooks) and a PyQt6 radial menu that opens instantly. Clipboard capture runs in parallel on a worker thread. The pipeline is split into `prepare()` and `execute()`, so a consent dialog can sit between them.<br/>
+**What it shows:** desktop systems work, privacy-aware design and graceful degradation, backed by about 300 tests and Windows CI. *Working on Windows.*
 
-## Tools I've used in public projects
+### 🌫️ [AirTwin X](https://github.com/Soham-o/AirTwin-X): from "how bad is the air?" to "what should the city do?"
 
-**Languages:** Python (most of my work), TypeScript/JavaScript; one merged fix in Rust<br/>
-**Apps & UI:** PyQt6, Streamlit, Next.js/React<br/>
-**Backend & data:** FastAPI, pandas, NumPy, scikit-learn<br/>
-**AI & ML:** Ollama (local LLMs), Google Gemini API, PyTorch / Stable-Baselines3, XGBoost<br/>
-**Engineering:** pytest, GitHub Actions, Git, Linux
+<a href="https://github.com/Soham-o/AirTwin-X"><img src="assets/airtwin-x.png" alt="AirTwin X pipeline: live data from WAQI, Open-Meteo, NASA FIRMS and OpenStreetMap feeds source attribution, then intervention ranking, scenario simulation, health and economic impact, and a rule-based Mayor Copilot" width="100%"/></a>
 
-## Currently exploring
+**Problem:** AQI dashboards report a number but don't help anyone decide what to do.<br/>
+**Approach:** attribute pollution to its sources, rank eight interventions with a weighted score, and simulate combinations. Overlapping effects **compound** rather than add, and the total is capped at 85%. Health and cost estimates are derived from the result.<br/>
+**What it shows:** integrating several live APIs, modelling with stated assumptions, and AI-style answers that stay auditable. *Prototype; 29 tests in GitHub Actions.*
 
-Multi-agent frameworks such as CrewAI, voice agents, and deploying Python
-services to Google Cloud. These aren't in my public repositories yet.
+### 🌍 [EarthShare](https://github.com/Soham-o/EarthShare): owning a carbon footprint, not just watching it
 
-## Get in touch
+<a href="https://github.com/Soham-o/EarthShare"><img src="assets/earthshare.png" alt="EarthShare dashboard showing a daily check-in, a carbon score ring at 565, 520 kg of CO2 this month, reduction potential and yearly projections" width="100%"/></a>
 
-I'm open to open-source and research collaboration, freelance AI or
-automation projects, and full-time roles. The best way to reach me is
-[email](mailto:sohampanda95599@gmail.com) or
-[LinkedIn](https://www.linkedin.com/in/soham-panda-a90720336/).
+**Problem:** most carbon apps stop at charts and streaks.<br/>
+**Approach:** a deterministic emissions engine behind a layered FastAPI backend (thin routes, services, repositories) with JWT auth, rate limiting and security headers, and a Next.js frontend.<br/>
+**What it shows:** building a complete full-stack system with security and accessibility in mind. *Prototype built for a hackathon; CI runs the backend tests (85 passed, 1 skipped), the frontend tests (21 passed) and a production build.*
+
+### 🔧 Fixes merged into open-source AI-agent tools
+
+| Project | What I fixed |
+|---|---|
+| **[lintlang](https://github.com/hermes-labs-ai/lintlang)**, a linter that catches AI-agent config failures · [#88](https://github.com/hermes-labs-ai/lintlang/pull/88) ✅ | Non-string tool names in YAML configs crashed the parser with an internal `AttributeError`. Now they get a clear `tools[i].name must be a string` error and a regression test. |
+| **[jcode](https://github.com/1jehuang/jcode)**, an AI coding-agent harness in Rust · [#1645](https://github.com/1jehuang/jcode/pull/1645) ✅ | An interrupted turn could leave an orphaned web-search block in saved history, and replaying it made the Anthropic API reject the whole request. The provider now drops those blocks before replay, with tests. |
+
+<details>
+<summary><b>More of my work</b></summary>
+<br/>
+
+- **[PersonaLearn](https://github.com/Soham-o/PersonaLearn)**: a team project (5 people, 3-hour sprint) that uses Gemini to explain study topics through analogies from a learner's interests, then quizzes them.
+- **ML notebooks**: [movie recommender](https://github.com/Soham-o/Movie_Recommender_System) (cosine similarity), [Spotify genre clustering](https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation) (k-means) and [fake-news detection](https://github.com/Soham-o/Fake-News-Detection-) (TF-IDF and logistic regression).
+- [All my public pull requests →](https://github.com/pulls?q=is%3Apr+author%3ASoham-o+is%3Apublic)
+
+</details>
+
+## Where I'm heading
+
+Deeper into AI engineering, in three directions:
+- **Agents** that take actions across tools rather than only answering questions.
+- **Automation** that removes repetitive steps from everyday work.
+- **Developer tools** that make AI systems easier to build, check and trust.
+
+I'm studying computer science at SGT University alongside this work.
+
+I'm open to open-source and research collaboration, freelance AI or automation projects, and full-time roles. If something here overlaps with what you're building, I'd like to hear about it.
 
 <div align="center">
+
+[![Email](https://img.shields.io/badge/Email-sohampanda95599%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sohampanda95599@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Soham_Panda-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soham-panda-a90720336/)
 
 <img src="footer.svg" alt="Footer: automate everything, build once, let it run forever. sohampanda95599@gmail.com, github.com/Soham-o" width="100%"/>
 
