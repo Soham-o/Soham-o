@@ -64,7 +64,7 @@ All three projects have test suites running in CI, about 300 tests in Cursor Bit
 **Approach:** attribute pollution to its sources, rank eight interventions with a weighted score, and simulate combinations. Overlapping effects **compound** rather than add, and the total is capped at 85%. Health and cost estimates are derived from the result.<br/>
 **What it shows:** integrating several live APIs, modelling with stated assumptions, and AI-style answers that stay auditable. *Prototype; 29 tests in GitHub Actions.*
 
-### 🌍 [EarthShare](https://github.com/Soham-o/EarthShare): owning a carbon footprint, not just watching it
+### 🌍 [EarthShare](https://github.com/Soham-o/EarthShare): owning a carbon footprint, not just watching it 
 
 <a href="https://github.com/Soham-o/EarthShare"><img src="assets/earthshare.png" alt="EarthShare dashboard showing a daily check-in, a carbon score ring at 565, 520 kg of CO2 this month, reduction potential and yearly projections" width="100%"/></a>
 
