@@ -95,13 +95,11 @@ Merged pull requests to projects maintained by other people:
 
 What I've actually used in the projects above:
 
-| | |
-|---|---|
-| **Languages** | Python · TypeScript · JavaScript · Rust (one merged fix) |
-| **Apps & UI** | PyQt6 · Streamlit · Next.js / React |
-| **Backend & data** | FastAPI · pandas · NumPy · scikit-learn · OSMnx |
-| **AI & ML** | Ollama · Gemini API · XGBoost · Stable-Baselines3 / PyTorch |
-| **Engineering** | pytest · Vitest · GitHub Actions · Git · Linux |
+**Languages** · Python · TypeScript · JavaScript · Rust (one merged fix)<br/>
+**Apps & UI** · PyQt6 · Streamlit · Next.js / React<br/>
+**Backend & data** · FastAPI · pandas · NumPy · scikit-learn · OSMnx<br/>
+**AI & ML** · Ollama · Gemini API · XGBoost · Stable-Baselines3 / PyTorch<br/>
+**Engineering** · pytest · Vitest · GitHub Actions · Git · Linux
 
 **Exploring next:** multi-agent frameworks such as CrewAI, voice agents, and deploying Python services to Google Cloud.
 
