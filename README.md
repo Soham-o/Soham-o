@@ -37,12 +37,10 @@ All three projects have test suites running in CI, about 300 tests in Cursor Bit
 
 **Used in working projects**
 
-| | |
-|---|---|
-| **AI & LLMs** | Local models via Ollama · Gemini API · deterministic decision pipelines · XGBoost · scikit-learn |
-| **Automation & integrations** | REST APIs (WAQI, Open-Meteo, NASA FIRMS, OpenStreetMap, DuckDuckGo) · Windows global hotkeys and clipboard (pywin32) · OCR with Tesseract · GitHub Actions |
-| **Applications** | Python · PyQt6 desktop UI · Streamlit · FastAPI · Next.js / React · TypeScript |
-| **Engineering** | pytest · Vitest · ruff · Git · Linux |
+**AI & LLMs** · local models via Ollama · Gemini API · deterministic decision pipelines · XGBoost · scikit-learn<br/>
+**Automation & integrations** · REST APIs (WAQI, Open-Meteo, NASA FIRMS, OpenStreetMap, DuckDuckGo) · Windows global hotkeys and clipboard (pywin32) · OCR with Tesseract · GitHub Actions<br/>
+**Applications** · Python · PyQt6 desktop UI · Streamlit · FastAPI · Next.js / React · TypeScript<br/>
+**Engineering** · pytest · Vitest · ruff · Git · Linux
 
 **Used lightly so far:** Rust (one merged fix) · PyTorch / Stable-Baselines3 (a PPO training script) · Docker (a container for a Streamlit app)
 
