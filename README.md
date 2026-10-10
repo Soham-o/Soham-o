@@ -2,108 +2,119 @@
 
 <img src="header.svg" alt="Soham Panda: computer science student working on AI systems and developer tooling" width="100%"/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Soham_Panda-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soham-panda-a90720336/)
-[![Email](https://img.shields.io/badge/Email-sohampanda95599%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sohampanda95599@gmail.com)
+### I build practical AI software: tools that run on your own machine, show their reasoning, and keep working when a piece is missing.
+
+[Projects](#featured-projects) · [Open source](#open-source-contributions) · [Toolbox](#toolbox) · [Contact](#lets-build-something)
 
 </div>
 
-## About me
+<br/>
 
-I'm a computer science student at **SGT University** in India. I build tools in
-**Python** that put AI to practical use: desktop assistants, decision-support
-dashboards and small automations. Lately I've also been making focused fixes in
-other people's open-source projects.
+Hi, I'm **Soham**, a computer science student at **SGT University** in India.
+Most of my projects start with a small, specific frustration. One is switching
+tabs just to translate a sentence. Another is a city air-quality dashboard that
+shows a number but not what to do about it. I like turning those into working
+software, then writing the tests that prove it does what the README says.
 
-What I care about in my own projects: running locally when possible, degrading
-gracefully when a dependency is missing, and having tests that pin down the
-behaviour I claim.
+Lately I've also been reading other people's codebases closely enough to fix
+real bugs in them. Two of those fixes have been merged.
+
+<br/>
 
 ## Featured projects
 
-### [Cursor Bite](https://github.com/Soham-o/cursor_bite) · working (Windows)
+### ⌨️ [Cursor Bite](https://github.com/Soham-o/cursor_bite)
+**A radial AI menu that opens at your mouse cursor, anywhere in Windows.**
 
-A local-first Windows assistant that opens a radial menu at your mouse cursor
-when you press a hotkey, so you can translate, explain, summarize, rewrite, OCR
-or search the text you've selected without switching apps.
+<a href="https://github.com/Soham-o/cursor_bite"><img src="assets/cursor-bite.png" alt="Cursor Bite's radial menu with Translate highlighted, next to its keyboard shortcuts: Ctrl+Alt+B to open, then keys 1 to 8 for Translate, Summarize, Explain, Search Web, Settings, Capture OCR, Rewrite and Ask AI" width="100%"/></a>
 
-- **Built:** native `RegisterHotKey` listener, a PyQt6 radial menu and result
-  panel, clipboard-safe selection capture, and a privacy gateway that blocks or
-  asks consent before sensitive text leaves the machine (web search only).
-  Every optional engine loads lazily and fails safe.
-- **Tech:** Python, PyQt6, pywin32, Ollama, Argos Translate, Tesseract.
-- **Evidence:** about 300 pytest tests (unit, integration and security) and
-  GitHub Actions CI on Windows.
-- **Limits:** Windows only. Read Aloud is planned, not built.
+Select text in any app, press `Ctrl+Alt+B`, and translate, explain, summarize,
+rewrite or OCR it without leaving the window. Everything except web search
+runs locally. A privacy gateway checks for secrets and personal data, and asks
+before anything sensitive leaves the machine.
 
-### [AirTwin X](https://github.com/Soham-o/AirTwin-X) · prototype
+**Interesting bits:** a native Windows hotkey with no keyboard hooks · a menu
+that never waits on clipboard capture · every engine is optional and loads
+lazily, so a bare install still starts · about 300 pytest tests and Windows CI
 
-A Streamlit dashboard that breaks a city's AQI down by likely source, ranks
-eight municipal interventions with a weighted multi-criteria score, simulates
-combined interventions with overlap-compounding instead of naive addition, and
-estimates health and economic effects.
+`Python` `PyQt6` `pywin32` `Ollama` `Argos Translate` `Tesseract` · **Status:** working on Windows
 
-- **Tech:** Python, Streamlit, Folium, Plotly, OSMnx/NetworkX, XGBoost,
-  Stable-Baselines3; WAQI, Open-Meteo and OpenStreetMap data.
-- **Evidence:** 29 pytest tests for determinism, ranking, simulation bounds and NASA FIRMS key handling; GitHub Actions runs this suite.
-- **Limits:** model weights are fixed assumptions, the forecast model is
-  trained on synthetic data, and live sensor data needs a WAQI token
-  (otherwise it uses simulated data).
+<br/>
 
-### [EarthShare](https://github.com/Soham-o/EarthShare) · prototype
+### 🌫️ [AirTwin X](https://github.com/Soham-o/AirTwin-X)
+**Air-quality decision support that asks "what should the city do?", not just "how bad is it?".**
 
-A carbon-footprint tracker with a deterministic emissions engine, a FastAPI
-backend and a Next.js frontend.
+<a href="https://github.com/Soham-o/AirTwin-X"><img src="assets/airtwin-x.png" alt="AirTwin X pipeline: live data from WAQI, Open-Meteo, NASA FIRMS and OpenStreetMap feeds source attribution, then intervention ranking, scenario simulation, health and economic impact, and a rule-based Mayor Copilot" width="100%"/></a>
 
-- **Tech:** Python, FastAPI, pytest; TypeScript, Next.js/React, Vitest.
-- **Evidence:** GitHub Actions validates the backend (85 passed, 1 skipped),
-  frontend (21 passed), and a successful frontend build; coverage includes
-  security-header and accessibility tests.
+A Streamlit prototype that estimates which sources are driving a city's AQI,
+ranks eight interventions, and simulates combining them. Overlapping policies
+**compound instead of adding up**, and the combined drop is capped at 85%. The
+"Mayor Copilot" answers questions only from those computed results, with no
+LLM, so every number can be traced.
+
+`Python` `Streamlit` `OSMnx` `XGBoost` `Folium` `Plotly` · **Status:** prototype; 29 tests run in GitHub Actions; model weights are stated assumptions
+
+<br/>
+
+### 🌍 [EarthShare](https://github.com/Soham-o/EarthShare)
+**A carbon tracker built around owning your footprint, not just watching it.**
+
+<a href="https://github.com/Soham-o/EarthShare"><img src="assets/earthshare.png" alt="EarthShare dashboard showing a daily check-in, a carbon score ring at 565, 520 kg of CO2 this month, reduction potential and yearly projections" width="100%"/></a>
+
+Log daily activities, get deterministic emission estimates, and pick climate
+actions that show up in your projections. A full-stack app with JWT auth, rate
+limiting and security headers. GitHub Actions runs the backend tests (85 passed,
+1 skipped), the frontend tests (21 passed, including accessibility checks) and a
+production build.
+
+`FastAPI` `Next.js` `TypeScript` `pytest` `Vitest` · **Status:** prototype, built for a hackathon
+
+<br/>
+
+<details>
+<summary><b>More projects</b></summary>
+<br/>
+
+- **[PersonaLearn](https://github.com/Soham-o/PersonaLearn)**: a team project (Team Innovsphere, 5 people, built in 3 hours). It uses Gemini to explain study topics through analogies from a learner's interests, then quizzes them.
+- **ML notebooks**: [movie recommender](https://github.com/Soham-o/Movie_Recommender_System) (cosine similarity), [Spotify genre clustering](https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation) (k-means) and [fake-news detection](https://github.com/Soham-o/Fake-News-Detection-) (TF-IDF and logistic regression).
+
+</details>
 
 ## Open-source contributions
 
 Merged pull requests to projects maintained by other people:
 
-| Project | Pull request | What it changed |
-|---|---|---|
-| [hermes-labs-ai/lintlang](https://github.com/hermes-labs-ai/lintlang) | [#88](https://github.com/hermes-labs-ai/lintlang/pull/88) · merged | The YAML config parser now rejects non-string tool names with a clear `tools[i].name must be a string` error instead of failing with an internal `AttributeError`, with a regression test (fixes #87). |
-| [1jehuang/jcode](https://github.com/1jehuang/jcode) | [#1645](https://github.com/1jehuang/jcode/pull/1645) · merged | The Anthropic provider (Rust) now drops orphaned native web-search blocks left by interrupted turns before replaying history, which otherwise caused the API to reject the whole request; includes tests. |
+| Project | What I fixed |
+|---|---|
+| **[lintlang](https://github.com/hermes-labs-ai/lintlang)** · [#88](https://github.com/hermes-labs-ai/lintlang/pull/88) ✅ merged | Non-string tool names in YAML configs crashed the parser with an internal `AttributeError`. Now they get a clear `tools[i].name must be a string` error and a regression test (fixes #87). |
+| **[jcode](https://github.com/1jehuang/jcode)** · [#1645](https://github.com/1jehuang/jcode/pull/1645) ✅ merged | An interrupted turn could leave an orphaned web-search block in the saved history, and replaying it made the Anthropic API reject the whole request. The Rust provider now drops those blocks before replay, with tests. |
 
-All of my public pull requests:
-[github.com/pulls?q=author:Soham-o](https://github.com/pulls?q=is%3Apr+author%3ASoham-o+is%3Apublic)
+[See all my public pull requests →](https://github.com/pulls?q=is%3Apr+author%3ASoham-o+is%3Apublic)
 
-## Other work
+## Toolbox
 
-- **[PersonaLearn](https://github.com/Soham-o/PersonaLearn)**: team project
-  (Team Innovsphere, 5 members) built in a 3-hour sprint. A Streamlit app that
-  uses Gemini to explain study topics through analogies from a learner's
-  interests and quizzes them on the result.
-- **Machine-learning notebooks**:
-  [movie recommender](https://github.com/Soham-o/Movie_Recommender_System),
-  [Spotify genre clustering](https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation),
-  [fake-news detection](https://github.com/Soham-o/Fake-News-Detection-),
-  using scikit-learn (cosine similarity, k-means, logistic regression) and pandas.
+What I've actually used in the projects above:
 
-## Tools I've used in public projects
+| | |
+|---|---|
+| **Languages** | Python · TypeScript · JavaScript · Rust (one merged fix) |
+| **Apps & UI** | PyQt6 · Streamlit · Next.js / React |
+| **Backend & data** | FastAPI · pandas · NumPy · scikit-learn · OSMnx |
+| **AI & ML** | Ollama · Gemini API · XGBoost · Stable-Baselines3 / PyTorch |
+| **Engineering** | pytest · Vitest · GitHub Actions · Git · Linux |
 
-**Languages:** Python (most of my work), TypeScript/JavaScript; one merged fix in Rust<br/>
-**Apps & UI:** PyQt6, Streamlit, Next.js/React<br/>
-**Backend & data:** FastAPI, pandas, NumPy, scikit-learn<br/>
-**AI & ML:** Ollama (local LLMs), Google Gemini API, PyTorch / Stable-Baselines3, XGBoost<br/>
-**Engineering:** pytest, GitHub Actions, Git, Linux
+**Exploring next:** multi-agent frameworks such as CrewAI, voice agents, and deploying Python services to Google Cloud.
 
-## Currently exploring
+## Let's build something
 
-Multi-agent frameworks such as CrewAI, voice agents, and deploying Python
-services to Google Cloud. These aren't in my public repositories yet.
-
-## Get in touch
-
-I'm open to open-source and research collaboration, freelance AI or
-automation projects, and full-time roles. The best way to reach me is
-[email](mailto:sohampanda95599@gmail.com) or
-[LinkedIn](https://www.linkedin.com/in/soham-panda-a90720336/).
+I'm open to open-source and research collaboration, freelance AI or automation
+projects, and full-time roles. If one of these projects overlaps with something
+you're working on, I'd like to hear about it.
 
 <div align="center">
+
+[![Email](https://img.shields.io/badge/Email-sohampanda95599%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sohampanda95599@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Soham_Panda-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/soham-panda-a90720336/)
 
 <img src="footer.svg" alt="Footer: automate everything, build once, let it run forever. sohampanda95599@gmail.com, github.com/Soham-o" width="100%"/>
 
