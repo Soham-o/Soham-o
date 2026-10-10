@@ -55,8 +55,9 @@ A carbon-footprint tracker with a deterministic emissions engine, a FastAPI
 backend and a Next.js frontend.
 
 - **Tech:** Python, FastAPI, pytest; TypeScript, Next.js/React, Vitest.
-- **Evidence:** backend and frontend test suites, including security and
-  accessibility tests.
+- **Evidence:** GitHub Actions validates the backend (85 passed, 1 skipped),
+  frontend (21 passed), and a successful frontend build; coverage includes
+  security-header and accessibility tests.
 
 ## Open-source contributions
 
